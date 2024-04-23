@@ -140,11 +140,11 @@ export default class Physics
         this.car.options.wheelCustomSlidingRotationalSpeed = - 30
         this.car.options.wheelMass = 5
         this.car.options.controlsSteeringSpeed = 0.005
-        this.car.options.controlsSteeringMax = Math.PI * 0.17
+        this.car.options.controlsSteeringMax = Math.PI * 0.1
         this.car.options.controlsSteeringQuad = false
-        this.car.options.controlsAcceleratinMaxSpeed = 0.055
+        this.car.options.controlsAcceleratinMaxSpeed = 0.035
         this.car.options.controlsAcceleratinMaxSpeedBoost = 0.11
-        this.car.options.controlsAcceleratingSpeed = 2
+        this.car.options.controlsAcceleratingSpeed = 1
         this.car.options.controlsAcceleratingSpeedBoost = 3.5
         this.car.options.controlsAcceleratingQuad = true
         this.car.options.controlsBrakeStrength = 0.45

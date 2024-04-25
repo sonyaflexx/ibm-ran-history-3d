@@ -23,9 +23,9 @@ export default class IntroSection
 
         this.setStatic()
         this.setInstructions()
-        this.setOtherInstructions()
+        //this.setOtherInstructions()
         this.setTitles()
-        this.setTiles()
+        //this.setTiles()
         this.setDikes()
     }
 
@@ -58,10 +58,10 @@ export default class IntroSection
 
         this.instructions.arrows.label.material = new THREE.MeshBasicMaterial({ transparent: true, alphaMap: this.instructions.arrows.label.texture, color: 0xffffff, depthWrite: false, opacity: 0 })
 
-        this.instructions.arrows.label.geometry = this.resources.items.introInstructionsLabels.scene.children.find((_mesh) => _mesh.name === 'arrows').geometry
+        //this.instructions.arrows.label.geometry = this.resources.items.introInstructionsLabels.scene.children.find((_mesh) => _mesh.name === 'arrows').geometry
 
-        this.instructions.arrows.label.mesh = new THREE.Mesh(this.instructions.arrows.label.geometry, this.instructions.arrows.label.material)
-        this.container.add(this.instructions.arrows.label.mesh)
+        //this.instructions.arrows.label.mesh = new THREE.Mesh(this.instructions.arrows.label.geometry, this.instructions.arrows.label.material)
+        //this.container.add(this.instructions.arrows.label.mesh)
 
         if(!this.config.touch)
         {
@@ -69,7 +69,7 @@ export default class IntroSection
             this.instructions.arrows.up = this.objects.add({
                 base: this.resources.items.introArrowKeyBase.scene,
                 collision: this.resources.items.introArrowKeyCollision.scene,
-                offset: new THREE.Vector3(0, 0, 0),
+                offset: new THREE.Vector3(5, -2, 0),
                 rotation: new THREE.Euler(0, 0, 0),
                 duplicated: true,
                 shadow: { sizeX: 1, sizeY: 1, offsetZ: - 0.2, alpha: 0.5 },
@@ -79,7 +79,7 @@ export default class IntroSection
             this.instructions.arrows.down = this.objects.add({
                 base: this.resources.items.introArrowKeyBase.scene,
                 collision: this.resources.items.introArrowKeyCollision.scene,
-                offset: new THREE.Vector3(0, - 0.8, 0),
+                offset: new THREE.Vector3(5, - 2.8, 0),
                 rotation: new THREE.Euler(0, 0, Math.PI),
                 duplicated: true,
                 shadow: { sizeX: 1, sizeY: 1, offsetZ: - 0.2, alpha: 0.5 },
@@ -89,7 +89,7 @@ export default class IntroSection
             this.instructions.arrows.left = this.objects.add({
                 base: this.resources.items.introArrowKeyBase.scene,
                 collision: this.resources.items.introArrowKeyCollision.scene,
-                offset: new THREE.Vector3(- 0.8, - 0.8, 0),
+                offset: new THREE.Vector3(4.2, - 2.8, 0),
                 rotation: new THREE.Euler(0, 0, Math.PI * 0.5),
                 duplicated: true,
                 shadow: { sizeX: 1, sizeY: 1, offsetZ: - 0.2, alpha: 0.5 },
@@ -99,7 +99,7 @@ export default class IntroSection
             this.instructions.arrows.right = this.objects.add({
                 base: this.resources.items.introArrowKeyBase.scene,
                 collision: this.resources.items.introArrowKeyCollision.scene,
-                offset: new THREE.Vector3(0.8, - 0.8, 0),
+                offset: new THREE.Vector3(5.8, - 2.8, 0),
                 rotation: new THREE.Euler(0, 0, - Math.PI * 0.5),
                 duplicated: true,
                 shadow: { sizeX: 1, sizeY: 1, offsetZ: - 0.2, alpha: 0.5 },

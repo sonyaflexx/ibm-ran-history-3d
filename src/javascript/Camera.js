@@ -43,7 +43,7 @@ export default class Camera
 
         // Items
         this.angle.items = {
-            default: new THREE.Vector3(1.135, - 1.45, 1.15),
+            default: new THREE.Vector3(0.38, - 1, 1.3),
             projects: new THREE.Vector3(0.38, - 1.4, 1.63)
         }
 
@@ -74,7 +74,7 @@ export default class Camera
     setInstance()
     {
         // Set up
-        this.instance = new THREE.PerspectiveCamera(40, this.sizes.viewport.width / this.sizes.viewport.height, 1, 80)
+        this.instance = new THREE.PerspectiveCamera(50, this.sizes.viewport.width / this.sizes.viewport.height, 1, 80)
         this.instance.up.set(0, 0, 1)
         this.instance.position.copy(this.angle.value)
         this.instance.lookAt(new THREE.Vector3())
@@ -103,7 +103,7 @@ export default class Camera
                 this.instance.lookAt(this.targetEased)
 
                 // Apply pan
-                this.instance.position.x += this.pan.value.x
+                this.instance.position.x += this.pan.value.x + 3
                 this.instance.position.y += this.pan.value.y
             }
         })
